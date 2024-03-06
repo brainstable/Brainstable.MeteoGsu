@@ -1,0 +1,27 @@
+
+SELECT ROUND(AVG(T), 1) AS Temperature,
+		   CASE WHEN MIN(MinT) IS NOT NULL THEN ROUND(MIN(MinT), 1) ELSE ROUND(MIN(T), 1) END AS MinTemperature, 
+		   CASE WHEN MAX(MaxT) IS NOT NULL THEN ROUND(MAX(MaxT), 1) ELSE ROUND(MAX(T), 1) END AS MaxTemperature, 
+		   CASE WHEN SUM(R) IS NOT NULL THEN ROUND(SUM(R), 1) ELSE '0' END AS Rainfall,
+		   CASE WHEN MAX(HS) IS NOT NULL THEN ROUND(SUM(HS), 1) ELSE '-1' END AS SnowHight, 
+		   CAST(strftime('%Y', DT) AS INT) AS Year, 
+		   CAST(strftime('%m', DT) AS INT) AS Month, 
+		   CAST(strftime('%d', DT) AS INT) As Day
+	FROM HourParams " +
+	$"WHERE StationId = {stationId} " +
+ @"GROUP BY strftime('%Y', DT), strftime('%m', DT), strftime('%d', DT)
+	ORDER BY strftime('%Y', DT), strftime('%m', DT), strftime('%d', DT)
+
+
+SELECT ROUND(AVG(T), 1) AS Temperature,
+		   COALESCE (ROUND(MIN(MinT), 1), ROUND(MIN(T), 1)) AS MinTemperature, 
+		   COALESCE (ROUND(Max(MaxT), 1), ROUND(Max(T), 1)) AS MaxTemperature, 
+		   COALESCE (ROUND(SUM(R), 1), 0) AS Rainfall,
+		   COALESCE (ROUND(SUM(HS), 1), -1) AS SnowHight, 
+		   CAST(strftime('%Y', DT) AS INT) AS Year, 
+		   CAST(strftime('%m', DT) AS INT) AS Month, 
+		   CAST(strftime('%d', DT) AS INT) As Day
+	FROM HourParams " +
+	$"WHERE StationId = {stationId} " +
+ @"GROUP BY strftime('%Y', DT), strftime('%m', DT), strftime('%d', DT)
+	ORDER BY strftime('%Y', DT), strftime('%m', DT), strftime('%d', DT)

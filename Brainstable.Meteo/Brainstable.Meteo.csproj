@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF8F02B3-AFAB-4EFF-BD9B-999822DE559C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Brainstable.Meteo</RootNamespace>
+    <AssemblyName>Brainstable.Meteo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Brainstable.RP5">
+      <HintPath>..\libs\Brainstable.RP5.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Base, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Chart.Base.18.2.0.56\lib\net45\Syncfusion.Chart.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Windows, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Chart.Windows.18.2.0.56\lib\net45\Syncfusion.Chart.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.18.2.0.56\lib\net45\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Base, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grid.Base.18.2.0.56\lib\net45\Syncfusion.Grid.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grid.Windows.18.2.0.56\lib\net45\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grouping.Base, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grouping.Base.18.2.0.56\lib\net45\Syncfusion.Grouping.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.18.2.0.56\lib\net45\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Base.18.2.0.56\lib\net45\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Windows.18.2.0.56\lib\net45\Syncfusion.Shared.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SpellChecker.Base.18.2.0.56\lib\net45\Syncfusion.SpellChecker.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Tools.Base.18.2.0.56\lib\net45\Syncfusion.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Tools.Windows.18.2.0.56\lib\net45\Syncfusion.Tools.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base, Version=18.2450.0.56, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.XlsIO.WinForms.18.2.0.56\lib\net45\Syncfusion.XlsIO.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithm.cs" />
+    <Compile Include="ChartAppearance.cs" />
+    <Compile Include="ChartCollectionWeather.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartCollectionWeather.Designer.cs">
+      <DependentUpon>ChartCollectionWeather.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDataColumn.cs" />
+    <Compile Include="ChartDataRow.cs" />
+    <Compile Include="ChartTemperatureRain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTemperatureRain.Designer.cs">
+      <DependentUpon>ChartTemperatureRain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartTemperatureGtk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTemperatureGtk.Designer.cs">
+      <DependentUpon>ChartTemperatureGtk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartTemperatureRainPeriod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTemperatureRainPeriod.Designer.cs">
+      <DependentUpon>ChartTemperatureRainPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartTemperatures.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartTemperatures.Designer.cs">
+      <DependentUpon>ChartTemperatures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartToolBarSaveExcelItem.cs" />
+    <Compile Include="ChartWeather.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartWeather.Designer.cs">
+      <DependentUpon>ChartWeather.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionWeatherMonth.cs" />
+    <Compile Include="CollectionWeatherYear.cs" />
+    <Compile Include="DataGridWeatherViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataGridWeatherViewer.Designer.cs">
+      <DependentUpon>DataGridWeatherViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="FactoryDays.cs" />
+    <Compile Include="FactoryDecades.cs" />
+    <Compile Include="FactoryMonths.cs" />
+    <Compile Include="FactoryTableDays.cs" />
+    <Compile Include="FactoryTableDecades.cs" />
+    <Compile Include="FactoryTableMonths.cs" />
+    <Compile Include="FactoryWeather.cs" />
+    <Compile Include="FactoryWeatherPoint.cs" />
+    <Compile Include="FactoryYears.cs" />
+    <Compile Include="FileMeteo.cs" />
+    <Compile Include="FileMeteo2.cs" />
+    <Compile Include="Gtk.cs" />
+    <Compile Include="HelpMethods.cs" />
+    <Compile Include="IChartData.cs" />
+    <Compile Include="IWeatherParameters.cs" />
+    <Compile Include="MeteoStation.cs" />
+    <Compile Include="TransitionTemperature.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportData.cs" />
+    <Compile Include="WeatherDay.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeatherDecade.cs" />
+    <Compile Include="WeatherModel.cs" />
+    <Compile Include="WeatherMonth.cs" />
+    <Compile Include="WeatherParameter.cs" />
+    <Compile Include="WeatherPoint.cs" />
+    <Compile Include="WeatherStyle.cs" />
+    <Compile Include="WeatherViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WeatherViewer.Designer.cs">
+      <DependentUpon>WeatherViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeatherYear.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="templates\meteo.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChartCollectionWeather.resx">
+      <DependentUpon>ChartCollectionWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTemperatureRain.resx">
+      <DependentUpon>ChartTemperatureRain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTemperatureGtk.resx">
+      <DependentUpon>ChartTemperatureGtk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTemperatureRainPeriod.resx">
+      <DependentUpon>ChartTemperatureRainPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTemperatures.resx">
+      <DependentUpon>ChartTemperatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartWeather.resx">
+      <DependentUpon>ChartWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataGridWeatherViewer.resx">
+      <DependentUpon>DataGridWeatherViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeatherViewer.resx">
+      <DependentUpon>WeatherViewer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Action_ChooseSkin_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandMapping_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorStrechMenu_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\continuousField_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\histogram_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statsWindow_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BO_PivotChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\continuousField_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1downarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1downarrow1.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
